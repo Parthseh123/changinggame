@@ -368,85 +368,22 @@ function draw() {
             player.x=120;
              player.y=520;
              
-             obs20 = createSprite(1000,150,30,160);
-             obs20.shapeColor = "red";
-             obs20.velocityX -= 3;
-            
-             obs21 = createSprite(630,140,150,30);
-             obs21.shapeColor = "red";
-            
-             obs22 = createSprite(1100,490,30,150);
-             obs22.shapeColor = "red";
-            
-             obs23 = createSprite(1010,430,150,30);
-             obs23.shapeColor = "red";
-            
-             obs24 = createSprite(950,350,30,150);
-             obs24.shapeColor = "red";
+              if(keyDown("down")) {
+            player.y +=5};
 
-             target2 = createSprite(1200,100,50,50);
-             target2.shapeColor = "blue";
-            
+    if(keyDown("up")) {
+      player.y -=5};
+    
+      if(keyDown("left")) {
+        player.x -=5};
 
-             if(obs20.isTouching(obs21)){
-              obs20.bounceOff(obs21)
-             };
-          
-                if(obs20.isTouching(side3)){
-                  obs20.bounceOff(side3);
-                
-                };
+        if(keyDown("right")) {
+          player.x +=3};
 
-                if(player.isTouching(obs20)) {
-                  player.collide(obs20)
-                  let b = confirm("😢😭😭You Lost , Do you want to save your progress");
-                console.log(b);
-                player.x=120
-                 player.y=520
-                };
-
-                if(player.isTouching(obs21)) {
-                  player.collide(obs21)
-                  let b = confirm("😢😭😭You Lost , Do you want to save your progress");
-                console.log(b);
-                player.x=120
-                 player.y=520
-                };
-
-                if(player.isTouching(obs22)) {
-                  player.collide(obs22)
-                  let b = confirm("😢😭😭You Lost , Do you want to save your progress");
-                console.log(b);
-                player.x=120
-                 player.y=520
-                };
-
-                if(player.isTouching(obs23)) {
-                  player.collide(obs23)
-                  let b = confirm("😢😭😭You Lost , Do you want to save your progress");
-                console.log(b);
-                player.x=120
-                 player.y=520
-                };
-
-                if(player.isTouching(obs24)) {
-                  player.collide(obs24)
-                  let b = confirm("😢😭😭You Lost , Do you want to save your progress");
-                console.log(b);
-                player.x=120
-                 player.y=520
-                };
-
-                if(player.isTouching(target2)) {
-                  let b = confirm("😎😎😀😀😁😁You won , Do you want to save your progress");
-                  console.log(b);
-                  player.x=120;
-                   player.y=520;
-                  }
-          }          
-
-            
- drawSprites();
+            obs19.velocityY = 5;
+              
+              obs7.velocityY = 3;
+ 
           }
           
           
